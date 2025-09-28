@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Search Results for "{{ query }}"</h2>
+    <a href="/" class="btn btn-outline-primary">New Search</a>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <!-- YouTube Results -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h4><i class="fab fa-youtube me-2"></i> Video Tutorials</h4>
+            </div>
+            <div class="card-body">
+                {% if youtube_results %}
+                    <div class="list-group">
+                        {% for tutorial in youtube_results %}
+                        <a href="{{ tutorial.url }}" target="_blank" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <div class="me-3" style="width: 120px;">
+                                    <img src="{{ tutorial.thumbnail }}" alt="{{ tutorial.title }}" 
+                                         class="img-fluid rounded">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h5 class="mb-1">{{ tutorial.title }}</h5>
+                                    <p class="mb-1 text-muted">{{ tutorial.channel }}</p>
+                                    <small class="text-muted">{{ tutorial.description|truncate(150) }}</small>
+                                </div>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="text-muted">No video tutorials found.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <!-- Other Platforms Results -->
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h4><i class="fas fa-link me-2"></i> From Trusted Sites</h4>
+            </div>
+            <div class="card-body">
+                {% if other_results %}
+                    <div class="list-group">
+                        {% for result in other_results %}
+                        <a href="{{ result.link }}" target="_blank" 
+                           class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">{{ result.title }}</h6>
+                            </div>
+                            <small class="text-muted">{{ result.source }}</small>
+                        </a>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="text-muted">No results from other platforms.</p>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- Filters -->
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h4><i class="fas fa-filter me-2"></i> Filters</h4>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Duration</label>
+                        <select class="form-select">
+                            <option>Any length</option>
+                            <option>Short (< 10 min)</option>
+                            <option>Medium (10-30 min)</option>
+                            <option>Long (> 30 min)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Sort by</label>
+                        <select class="form-select">
+                            <option>Relevance</option>
+                            <option>Most Viewed</option>
+                            <option>Newest</option>
+                            <option>Highest Rated</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Apply Filters</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

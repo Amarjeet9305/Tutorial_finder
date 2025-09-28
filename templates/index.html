@@ -1,0 +1,303 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section text-center py-5 bg-light rounded-3 mb-5">
+    <h1 class="display-4">Find the Best Learning Tutorials</h1>
+    <p class="lead">Search across trusted platforms to find high-quality tutorials for any subject</p>
+    
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+            <form action="/search" method="POST">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control form-control-lg" 
+                           name="query" placeholder="What do you want to learn?" required>
+                    <select class="form-select form-select-lg" name="domain" style="max-width: 200px;">
+                        <option value="">All Domains</option>
+                        <option value="programming">Programming</option>
+                        <option value="design">Design</option>
+                        <option value="business">Business</option>
+                        <option value="data science">Data Science</option>
+                        <option value="machine learning">Machine Learning</option>
+                    </select>
+                    <button class="btn btn-primary btn-lg" type="submit">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="row mb-5">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-video text-primary mb-3" style="font-size: 2rem;"></i>
+                <h3>Video Tutorials</h3>
+                <p>Find the best video tutorials from YouTube and other video platforms.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-book text-success mb-3" style="font-size: 2rem;"></i>
+                <h3>Articles & Guides</h3>
+                <p>Discover comprehensive written tutorials from trusted sources.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-graduation-cap text-info mb-3" style="font-size: 2rem;"></i>
+                <h3>Courses</h3>
+                <p>Explore structured courses from top learning platforms.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Trusted Blogging Resources Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Trusted Blogging & Learning Resources</h2>
+            <p class="lead text-muted">Handpicked websites for in-depth articles and tutorials</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- FreeCodeCamp -->
+            <div class="col-md-3 col-6">
+                <div class="card resource-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_small.svg" 
+                             alt="FreeCodeCamp" class="img-fluid mb-3" style="height: 40px;">
+                        <h5>FreeCodeCamp</h5>
+                        <p class="small text-muted">Free coding tutorials and projects</p>
+                        <a href="https://www.freecodecamp.org/" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dev.to -->
+            <div class="col-md-3 col-6">
+                <div class="card resource-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" 
+                             alt="DEV Community" class="img-fluid mb-3" style="height: 40px;">
+                        <h5>DEV Community</h5>
+                        <p class="small text-muted">Developer community blog platform</p>
+                        <a href="https://dev.to/" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medium -->
+            <div class="col-md-3 col-6">
+                <div class="card resource-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Medium_logo_Monogram.svg/1200px-Medium_logo_Monogram.svg.png" 
+                             alt="Medium" class="img-fluid mb-3" style="height: 40px;">
+                        <h5>Medium</h5>
+                        <p class="small text-muted">Articles on tech and programming</p>
+                        <a href="https://medium.com/" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hashnode -->
+            <div class="col-md-3 col-6">
+                <div class="card resource-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png?auto=compress" 
+                             alt="Hashnode" class="img-fluid mb-3" style="height: 40px;">
+                        <h5>Hashnode</h5>
+                        <p class="small text-muted">Developer blogging platform</p>
+                        <a href="https://hashnode.com/" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS-Tricks -->
+            <div class="col-md-3 col-6">
+                <div class="card resource-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://css-tricks.com/wp-content/uploads/2018/05/css-tricks-logo-600.png" 
+                             alt="CSS-Tricks" class="img-fluid mb-3" style="height: 40px;">
+                        <h5>CSS-Tricks</h5>
+                        <p class="small text-muted">Frontend development resources</p>
+                        <a href="https://css-tricks.com/" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Smashing Magazine -->
+            <div class="col-md-3 col-6">
+                <div class="card resource-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://www.smashingmagazine.com/images/footer/smashing-magazine-logo.png" 
+                             alt="Smashing Magazine" class="img-fluid mb-3" style="height: 40px;">
+                        <h5>Smashing Magazine</h5>
+                        <p class="small text-muted">Web design and development</p>
+                        <a href="https://www.smashingmagazine.com/" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DigitalOcean Community -->
+            <div class="col-md-3 col-6">
+                <div class="card resource-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://www.digitalocean.com/_next/static/media/community-logo.0f114f0a.svg" 
+                             alt="DigitalOcean" class="img-fluid mb-3" style="height: 40px;">
+                        <h5>DigitalOcean</h5>
+                        <p class="small text-muted">Cloud infrastructure tutorials</p>
+                        <a href="https://www.digitalocean.com/community" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LogRocket Blog -->
+            <div class="col-md-3 col-6">
+                <div class="card resource-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="https://blog.logrocket.com/wp-content/uploads/2021/04/logrocket-blog-logo.png" 
+                             alt="LogRocket" class="img-fluid mb-3" style="height: 40px;">
+                        <h5>LogRocket Blog</h5>
+                        <p class="small text-muted">Web development insights</p>
+                        <a href="https://blog.logrocket.com/" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Used Section -->
+<section class="technology-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Technologies Powering AiWithAmar</h2>
+            <p class="lead text-muted">Built with modern tools for the best experience</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Flask -->
+            <div class="col-md-2 col-4 text-center">
+                <div class="tech-card p-3 rounded-3 bg-white shadow-sm h-100">
+                    <img src="https://flask.palletsprojects.com/en/3.0.x/_static/flask-logo.png" 
+                         alt="Flask" class="img-fluid mb-3" style="height: 60px;">
+                    <h5 class="mb-0">Flask</h5>
+                    <small class="text-muted">Backend Framework</small>
+                </div>
+            </div>
+
+            <!-- Python -->
+            <div class="col-md-2 col-4 text-center">
+                <div class="tech-card p-3 rounded-3 bg-white shadow-sm h-100">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" 
+                         alt="Python" class="img-fluid mb-3" style="height: 60px;">
+                    <h5 class="mb-0">Python</h5>
+                    <small class="text-muted">Programming</small>
+                </div>
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="col-md-2 col-4 text-center">
+                <div class="tech-card p-3 rounded-3 bg-white shadow-sm h-100">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png" 
+                         alt="Bootstrap" class="img-fluid mb-3" style="height: 60px; width: 60px;">
+                    <h5 class="mb-0">Bootstrap 5</h5>
+                    <small class="text-muted">Frontend Design</small>
+                </div>
+            </div>
+
+            <!-- YouTube API -->
+            <div class="col-md-2 col-4 text-center">
+                <div class="tech-card p-3 rounded-3 bg-white shadow-sm h-100">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" 
+                         alt="YouTube API" class="img-fluid mb-3" style="height: 60px;">
+                    <h5 class="mb-0">YouTube API</h5>
+                    <small class="text-muted">Content Source</small>
+                </div>
+            </div>
+
+            <!-- BeautifulSoup -->
+            <div class="col-md-2 col-4 text-center">
+                <div class="tech-card p-3 rounded-3 bg-white shadow-sm h-100">
+                    <img src="https://www.crummy.com/software/BeautifulSoup/bs4/doc/_images/6.1.jpg" 
+                         alt="BeautifulSoup" class="img-fluid mb-3" style="height: 60px;">
+                    <h5 class="mb-0">BeautifulSoup</h5>
+                    <small class="text-muted">Web Scraping</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Add this section below the Technology Used section -->
+<section class="testimonial-section py-5 bg-light">  <!-- Changed background to bg-light -->
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Meet Our Team</h2>
+            <p class="lead text-muted">The passionate minds behind AiWithAmar</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Team Member 1 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="{{ url_for('static', filename='images/team/amar.jpg') }}" 
+                             class="rounded-circle mb-3" width="150" alt="Amar Jeet">
+                        <h4>Amar Jeet</h4>
+                        <p class="text-primary mb-1">Founder & Lead Developer</p>
+                        <p class="small">"Building tools to democratize education has been my lifelong passion."</p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/amarjeet" class="text-muted mx-1"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/amarjeet" class="text-muted mx-1"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="{{ url_for('static', filename='images/team/sophia.jpg') }}" 
+                             class="rounded-circle mb-3" width="150" alt="Sophia Chen">
+                        <h4>Sophia Chen</h4>
+                        <p class="text-primary mb-1">UI/UX Designer</p>
+                        <p class="small">"Creating intuitive interfaces that make learning enjoyable."</p>
+                        <div class="social-links">
+                            <a href="#" class="text-muted mx-1"><i class="fab fa-behance"></i></a>
+                            <a href="#" class="text-muted mx-1"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="{{ url_for('static', filename='images/team/raj.jpg') }}" 
+                             class="rounded-circle mb-3" width="150" alt="Raj Patel">
+                        <h4>Raj Patel</h4>
+                        <p class="text-primary mb-1">Data Engineer</p>
+                        <p class="small">"Optimizing our search algorithms to find the best content."</p>
+                        <div class="social-links">
+                            <a href="#" class="text-muted mx-1"><i class="fab fa-kaggle"></i></a>
+                            <a href="#" class="text-muted mx-1"><i class="fab fa-medium"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+</section>
+
+{% endblock %}
