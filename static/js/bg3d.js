@@ -1,5 +1,5 @@
 /* ==========================================
-   AiTutor — 3D Scroll-Reactive Background
+   Tutorial.ai — 3D Scroll-Reactive Background
    Three.js scene: particles, wave grid, orbs
    ========================================== */
 

@@ -1,5 +1,5 @@
 /* ==========================================
-   AiTutor — Main JavaScript
+   Tutorial.ai — Main JavaScript
    ========================================== */
 
 'use strict';
@@ -124,6 +124,49 @@
     }, { threshold: 0.5 });
 
     stats.forEach(function (stat) { observer.observe(stat); });
+})();
+
+// ===== SCROLL-REVEAL HERO TITLE =====
+(function () {
+    const title = document.querySelector('.scroll-reveal-text');
+    if (!title) return;
+
+    let scrollTarget = 0;
+    let scrollCurrent = 0;
+
+    window.addEventListener('scroll', function () {
+        scrollTarget = window.scrollY;
+    }, { passive: true });
+
+    function lerp(a, b, t) { return a + (b - a) * t; }
+
+    function updateTitle() {
+        // Even smoother lerp for a "calm" feel (0.05 instead of 0.08)
+        scrollCurrent = lerp(scrollCurrent, scrollTarget, 0.05);
+
+        // Map scroll distance (e.g., 0 to 450px) to animation progress (0 to 1)
+        const revealRange = 450;
+        const progress = Math.min(scrollCurrent / revealRange, 1);
+
+        // Smooth cubic-out easing for premium feel
+        const eased = 1 - Math.pow(1 - progress, 3);
+
+        // 1. Opacity: 0.1 -> 1.0
+        title.style.opacity = 0.1 + (0.9 * eased);
+
+        // 2. Transform: translateY(20px) -> 0
+        const translateY = 20 * (1 - eased);
+        title.style.transform = `translateY(${translateY}px)`;
+
+        // 3. Left-to-Right Mask Sweep
+        // We sweep from 0% to 115% to ensure the 15% gradient tail clears the text
+        const maskProgress = eased * 115;
+        title.style.setProperty('--reveal-progress', `${maskProgress}%`);
+
+        requestAnimationFrame(updateTitle);
+    }
+
+    updateTitle();
 })();
 
 // ===== CARD TILT MICRO-INTERACTION =====

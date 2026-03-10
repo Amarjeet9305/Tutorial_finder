@@ -73,6 +73,36 @@
 
         <!-- Results Layout -->
         {% if query %}
+        
+        <!-- ===== AI LEARNING GUIDE ===== -->
+        {% if ai_learning_path %}
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card animate-on-scroll" style="border: 1px solid rgba(139, 92, 246, 0.3); background: linear-gradient(145deg, rgba(15, 15, 23, 1) 0%, rgba(20, 15, 30, 1) 100%);">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="feature-icon purple mb-0" style="width: 40px; height: 40px; font-size: 1.2rem;">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-0" style="font-size: 1.2rem; font-weight: 600;">AI Learning Guide</h4>
+                                <small style="color: #94a3b8;">Personalized path based on your query</small>
+                            </div>
+                            {% if optimized_query %}
+                            <span class="ai-badge purple ms-auto">
+                                <i class="fas fa-magic me-1"></i> Search Optimized
+                            </span>
+                            {% endif %}
+                        </div>
+                        <div class="ai-content text-light" style="font-size: 0.95rem; line-height: 1.6;">
+                            {{ ai_learning_path | safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
         <div class="row g-4">
 
             <!-- ===== VIDEO TUTORIALS (YouTube) ===== -->
