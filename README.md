@@ -42,22 +42,25 @@ Instead of manually browsing YouTube, freeCodeCamp, Udemy, Coursera, and edX sep
 ### 🏠 Landing Page
 > Clean, intuitive interface for beginners and learners to get started instantly.
 
-<img width="100%" alt="Landing Page" src="https://github.com/user-attachments/assets/87a1a3ae-1299-44da-8d47-6cd0a482427f" />
+<img width="1321" height="648" alt="Screenshot 2026-03-31 105626" src="https://github.com/user-attachments/assets/c7b373e1-1eb3-4723-abbf-fa68b767c16f" />
+
 
 ### 🔎 Smart Search with Domain Filter
 > Enter any topic and select a domain to get targeted tutorial results.
+<img width="1349" height="638" alt="Screenshot 2026-03-31 105754" src="https://github.com/user-attachments/assets/2bfe76c8-f0bc-4a0d-9014-cdd0eb68cf4c" />
 
-<img width="100%" alt="Search Interface" src="https://github.com/user-attachments/assets/43181769-6a71-4e70-b0aa-8d36a60b3c65" />
 
 ### 📺 YouTube Tutorial Results
 > Curated YouTube tutorials with thumbnails, channel info, and direct links.
 
-<img width="100%" alt="Tutorial Results" src="https://github.com/user-attachments/assets/e6a662a2-52a4-4e69-9695-23409736c12b" />
+<img width="1363" height="583" alt="Screenshot 2026-03-31 110031" src="https://github.com/user-attachments/assets/9d45397c-dbd2-47db-bb2b-35871abccff4" />
+
 
 ### 📝 Blog-Based Learning Resources
 > Additional articles and courses from freeCodeCamp, Udemy, Coursera, and edX.
 
-<img width="100%" alt="Blog Resources" src="https://github.com/user-attachments/assets/ac879198-4753-4aad-852d-6cf343df20cf" />
+<img width="1349" height="646" alt="Screenshot 2026-03-31 105703" src="https://github.com/user-attachments/assets/e03bf5b2-ed73-4f41-a46a-6f387af19ef8" />
+
 
 ---
 
