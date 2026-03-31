@@ -10,7 +10,7 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-4.6-47A248?logo=mongodb&logoColor=white)](https://mongodb.com)
 [![Deploy](https://img.shields.io/badge/Render-Deployed-46E3B7?logo=render&logoColor=white)](https://render.com)
 
-[Live Demo](#) · [Features](#-features) · [Getting Started](#-getting-started) · [Deploy](#-deployment)
+[Live Demo](https://tutorial-finder-2.onrender.com/) · [Features](#-features) · [Getting Started](#-getting-started) · [Deploy](#-deployment)
 
 </div>
 
